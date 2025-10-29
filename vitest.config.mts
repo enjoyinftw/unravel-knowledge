@@ -1,5 +1,6 @@
 /// <reference types="vitest/config" />
-import { coverageConfigDefaults, defineConfig } from "vitest/config";
+import { coverageConfigDefaults, defineConfig, defineProject } from "vitest/config";
+
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
@@ -19,8 +20,8 @@ export default defineConfig({
       exclude: ["next.config.ts", "**/types.ts", "**/index.ts", ...coverageConfigDefaults.exclude],
     },
     projects: [
-      {
-        extends: true,
+      defineProject({
+        //extends: true,
         plugins: [
           // The plugin will run tests for the stories defined in your Storybook config
           // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
@@ -41,6 +42,14 @@ export default defineConfig({
             ],
           },
           setupFiles: [".storybook/vitest.setup.ts"],
+        },
+      }),
+      {
+        // will inherit options from this config like plugins and pool
+        extends: true,
+        test: {
+          name: "unit",
+          include: ["**/*.test.tsx"],
         },
       },
     ],

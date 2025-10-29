@@ -1,15 +1,20 @@
-"use client";
+type ButtonProps = {
+  label?: string;
+  onClick: () => void;
+  disabled?: boolean;
+  ariaLabel?: string
+};
 
-import { useState, type FC } from "react";
-
-const Button: FC = () => {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
-
-  return <button onClick={handleClick}>Clicked {count} times</button>;
+const Button = ({ label = "", disabled = false, onClick, ariaLabel }: ButtonProps) => {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      aria-label={ariaLabel}
+    >
+      {label}
+    </button>
+  );
 };
 
 export default Button;
