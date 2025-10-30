@@ -2,10 +2,9 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, fn } from "storybook/test";
 
 import Button from "@/components/Button/Button";
-import userEvent from "@testing-library/user-event";
 
 const meta = {
-  title: "Comonent/Button",
+  title: "Component/Button",
   component: Button,
   parameters: {
     layout: "centered",
@@ -57,7 +56,7 @@ export const WithAriaLabel: Story = {
   },
   play: async ({ args, canvas, userEvent }) => {
     const buttonElement = canvas.getByRole("button", { name: args.ariaLabel });
-    
+
     await expect(buttonElement).toBeInTheDocument();
     await userEvent.click(buttonElement);
     await expect(args.onClick).toHaveBeenCalled();
