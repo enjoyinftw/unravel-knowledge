@@ -4,14 +4,7 @@ export type ListItemProps = {
 };
 
 const ListItem = ({ content = "", id }: ListItemProps) => {
-  return (
-    <li
-      key={id}
-      data-testid={id}
-    >
-      {content}
-    </li>
-  );
+  return <li data-testid={id}>{content}</li>;
 };
 
 export default ListItem;
