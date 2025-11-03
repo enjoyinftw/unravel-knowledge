@@ -9,7 +9,7 @@ describe("ListItem test", () => {
     render(
       <ListItem
         content={content}
-        itemKey={id}
+        id={id}
       />,
     );
 
@@ -21,7 +21,7 @@ describe("ListItem test", () => {
 
   it("should render empty ListItem when only given a key", () => {
     const id = "LI1";
-    render(<ListItem itemKey={id} />);
+    render(<ListItem id={id} />);
 
     const itemElement = screen.getByTestId(id);
     expect(itemElement).toBeInTheDocument();
@@ -34,7 +34,7 @@ describe("ListItem test", () => {
     render(
       <ListItem
         content={content}
-        itemKey={id}
+        id={id}
       />,
     );
     const itemElement = screen.getByTestId(id);
@@ -44,7 +44,7 @@ describe("ListItem test", () => {
 
   it("should render as an <li> element", () => {
     const id = "LI1";
-    render(<ListItem itemKey={id} />);
+    render(<ListItem id={id} />);
 
     const itemElement = screen.getByTestId(id);
     expect(itemElement.tagName).toBe("LI");
@@ -56,7 +56,7 @@ describe("ListItem test", () => {
     const { rerender } = render(
       <ListItem
         content={content}
-        itemKey={id}
+        id={id}
       />,
     );
 
@@ -67,7 +67,7 @@ describe("ListItem test", () => {
     rerender(
       <ListItem
         content={newContent}
-        itemKey={id}
+        id={id}
       />,
     );
     expect(listItem).toHaveTextContent(newContent);

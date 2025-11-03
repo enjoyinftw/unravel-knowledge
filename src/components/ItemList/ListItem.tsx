@@ -1,13 +1,13 @@
-type ListItemProps = {
+export type ListItemProps = {
   content?: string;
-  itemKey: string;
+  id: string;
 };
 
-const ListItem = ({ content = "", itemKey }: ListItemProps) => {
+const ListItem = ({ content = "", id }: ListItemProps) => {
   return (
     <li
-      key={itemKey}
-      data-testid={itemKey}
+      key={id}
+      data-testid={id}
     >
       {content}
     </li>

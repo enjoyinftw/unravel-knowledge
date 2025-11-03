@@ -24,20 +24,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    itemKey: "LI1",
+    id: "LI1",
     content: "Default",
   },
 };
 
 export const Empty: Story = {
   args: {
-    itemKey: "LI1",
+    id: "LI1",
   },
 };
 
 export const Unicode: Story = {
   args: {
-    itemKey: "LI1",
+    id: "LI1",
     content: "\u2713",
   },
 };
