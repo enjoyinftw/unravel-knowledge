@@ -16,40 +16,32 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    state: {
-      items: FakeData,
-      isLoading: false,
-      errorMsg: "",
-    },
+    items: FakeData,
+    isLoading: false,
+    errorMsg: "",
   },
 };
 
 export const Loading: Story = {
   args: {
-    state: {
-      items: [],
-      isLoading: true,
-      errorMsg: "",
-    },
+    items: [],
+    isLoading: true,
+    errorMsg: "",
   },
 };
 
 export const Error: Story = {
   args: {
-    state: {
-      items: [],
-      isLoading: true,
-      errorMsg: "Error",
-    },
+    items: [],
+    isLoading: true,
+    errorMsg: "Error",
   },
 };
 
 export const EmptyList: Story = {
   args: {
-    state: {
-      items: [],
-      isLoading: true,
-      errorMsg: "",
-    },
+    items: [],
+    isLoading: true,
+    errorMsg: "",
   },
 };

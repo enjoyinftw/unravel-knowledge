@@ -19,7 +19,7 @@ describe("ListComponent tests", () => {
       isLoading: false,
       errorMsg: "",
     };
-    render(<ListComponent state={listState} />);
+    render(<ListComponent {...listState} />);
 
     const { liElements, loadingElement, errorElement, noItemsElement } = getListComponentElements();
 
@@ -39,7 +39,7 @@ describe("ListComponent tests", () => {
       isLoading: true,
       errorMsg: "",
     };
-    render(<ListComponent state={listState} />);
+    render(<ListComponent {...listState} />);
 
     const { liElements, loadingElement, errorElement, noItemsElement } = getListComponentElements();
 
@@ -55,7 +55,7 @@ describe("ListComponent tests", () => {
       isLoading: false,
       errorMsg: "error",
     };
-    render(<ListComponent state={listState} />);
+    render(<ListComponent {...listState} />);
 
     const { liElements, loadingElement, errorElement, noItemsElement } = getListComponentElements();
 
@@ -71,7 +71,7 @@ describe("ListComponent tests", () => {
       isLoading: false,
       errorMsg: "",
     };
-    render(<ListComponent state={listState} />);
+    render(<ListComponent {...listState} />);
     const { liElements, loadingElement, errorElement, noItemsElement } = getListComponentElements();
 
     expect(noItemsElement).toBeInTheDocument;

@@ -16,17 +16,13 @@ export const FakeData: ListItemProps[] = [
   },
 ];
 
-type ListComponentState = {
+type ListComponentProps = {
   items: ListItemProps[];
   isLoading: boolean;
   errorMsg: string;
 };
 
-type ListComponentProps = {
-  state: ListComponentState;
-};
-
-const ListComponent = ({ state: { items, isLoading, errorMsg } }: ListComponentProps) => {
+const ListComponent = ({ items, isLoading, errorMsg }: ListComponentProps) => {
   if (isLoading) return <p>Loading</p>;
   if (errorMsg) return <p>{errorMsg}</p>;
   if (items.length === 0) return <p>No items.</p>;
