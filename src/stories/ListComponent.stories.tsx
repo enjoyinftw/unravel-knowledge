@@ -33,7 +33,7 @@ export const Loading: Story = {
 export const Error: Story = {
   args: {
     items: [],
-    isLoading: true,
+    isLoading: false,
     errorMsg: "Error",
   },
 };
@@ -41,7 +41,7 @@ export const Error: Story = {
 export const EmptyList: Story = {
   args: {
     items: [],
-    isLoading: true,
+    isLoading: false,
     errorMsg: "",
   },
 };

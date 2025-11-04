@@ -16,7 +16,7 @@ export const FakeData: ListItemProps[] = [
   },
 ];
 
-type ListComponentProps = {
+export type ListComponentProps = {
   items: ListItemProps[];
   isLoading: boolean;
   errorMsg: string;
