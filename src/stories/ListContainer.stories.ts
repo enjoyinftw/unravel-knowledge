@@ -1,8 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { expect, waitFor } from "storybook/test";
-import { FakeData } from "@/components/ItemList/ListComponent";
 import ListContainer from "@/components/ItemList/ListContainer";
-import { fetchListData } from "@/services/listService.mock";
 import { ListItemProps } from "@/components/ItemList/ListItem";
 
 const meta = {
