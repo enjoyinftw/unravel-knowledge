@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import Timer from "@/components/Timer/Timer";
-import userEvent from "@testing-library/user-event";
 
 const meta = {
   title: "Component/Timer",
